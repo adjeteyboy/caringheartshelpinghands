@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Caring Hearts Helping Hands</title>
+</head>
+<body>
+  
+  <div class="info">
+    <h2>We will be live in...</h2>
+    <div class="time">
+      <div class="day">
+        <p id="day__digit">23</p>
+        <h4>days</h4>
+      </div>
+      <div class="hour">
+        <p id="hour__digit">04</p>
+        <h4>hours</h4>
+      </div>
+      <div class="minute">
+        <p id="minute__digit">12</p>
+        <h4>minutes</h4>
+      </div>
+      <div class="second">
+        <p id="second__digit">22</p>
+        <h4>seconds</h4>
+      </div>
+    </div>
+  </div>
+    
+  <script>
+    function countdown() {
+      var now = new Date();
+      var liveDate = new Date(2019, 03, 11);
+      
+      var currentTime = now.getTime();
+      var liveTime = liveDate.getTime();
+      
+      var remTime = liveTime - currentTime;
+      
+      var s = Math.floor(remTime / 1000);
+      var m = Math.floor(s / 60);
+      var h = Math.floor(m / 60);
+      var d = Math.floor(h / 24);
+      
+      // get remaining 
+      h %= 24
+      m %= 60
+      s %= 60
+      
+      h = (h < 10) ? "0" + h : h
+      m = (m < 10) ? "0" + m : m
+      s = (s < 10) ? "0" + s : s
+      
+      document.getElementById('day__digit').innerText = d
+      document.getElementById('hour__digit').innerText = h
+      document.getElementById('minute__digit').innerText = m
+      document.getElementById('second__digit').innerText = s
+    }
+    
+    setInterval(countdown, 1000)
+  </script>
+  
+</body>
+</html>
