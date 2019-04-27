@@ -17,13 +17,32 @@
       <img class="logo" src="img/CHWHH logo_cropped.png" alt="caring hearts helping hands logo">
       <span class="hamburger-icon"><i class="fas fa-bars fa-3x"></i></span>
       
-      <div class="company__info">
-        <p class="company__info__phone">Call Us Today:  774 208 3238</p>
-        <p class="company__info__email">Email:  cderanamie@yahoo.com</p>
-        <span class="locationFinder">
-          <p>Location Finder</p>
-          <i class="fas fa-map-marker-alt"></i>
+      <!-- <picture class="overlay-image">
+        <source srcset="img/background_1440.jpg" media="(min-width: 1440px)">
+        <source srcset="img/background_1200.jpg" media="(min-width: 1200px)">
+        <source srcset="img/background_1024_1366.jpg" media="(min-device-width : 1024px) and (max-device-width : 1024px) and (min-device-height : 1366px) and (max-device-height : 1366px) and (min-width: 1024px) and (max-width: 1024px)">  
+        <source srcset="img/background_1024.jpg" media="(min-width: 1024px)">
+        <source srcset="img/background_760.jpg" media="(min-width: 760px)">
+        <img src="img/background_480p.jpg" alt="background_mountain">
+      </picture> -->
+
+
+      <!-- <div class="text-overlay">
+        <span class="close-overlay">
+          <i class="fas fa-times"></i>
         </span>
+      </div> -->
+
+      <div class="company__info">
+        <div class="company__info__inner">
+            <p class="company__info__phone"><span class="purple">Call Us Today:</span>  774 208 3238</p>
+            <p class="company__info__email"><span class="purple">Email:</span>  cderanamie@yahoo.com</p>
+            <span class="locationFinder" onclick="window.open('https://goo.gl/maps/MNtqoSHBhGauaHWn8')">
+              <p class="locationFinder__text">Location Finder</p>
+              <i class="fas fa-map-marker-alt location__icon"></i>
+            </span>
+        </div>
+        
         <nav>
           <ul>
             <li>Home</li>
@@ -44,7 +63,21 @@
         </div>
       </div>
 
-      <img class="hero__image" src="img/old_lady_cropped.jpg" alt="old lady">
+      <!-- <img class="hero__image" src="img/old_lady_cropped.jpg" alt="old lady"> -->
+      <!-- <img srcset="img/lady_320.jpeg 320w,
+                   img/lady_420.jpeg 420w,
+                   img/lady_520.jpeg 520w,
+                   img/lady_610.jpeg 610w"
+           sizes="(max-width: 430px) 326px
+                  (max-width: 520px) 420px
+                  (max-width: 610px) 520px
+                  610px"
+           src="img/lady_610.jpeg" alt="old lady"> -->
+      <img	srcset="img/lady_320.jpeg 320w,
+                    img/lady_610.jpeg 610w,
+                    img/old_lady_cropped.jpg 810w"
+            sizes="(min-width: 800px) 40vw, 610px" 
+            src="img/old_lady_cropped.jpg" alt="old lady" class="hero__image">
     </div>
 
     <div class="about">
@@ -79,39 +112,44 @@
       </div>
     </div>
 
-    <div class="services">
-      <h4 class="heading">Our Signature Services</h4>
-      <ul class="services_list fa-ul">
-        <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Live In Care</p></li>
-        <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Live Out Care</p></li>
-        <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Elderly Attention</p></li>
-        <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Caring Aide and Companionship</p></li>
-        <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">General Care and Assistance such as help with personal needs, light and general house keeping</p></li>
-      </ul>
+    <div class="services__container">
+      <div class="services__text">
+          <h4 class="services__heading heading">Our Signature Services</h4>
+          <ul class="services_list fa-ul">
+            <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Live In Care</p></li>
+            <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Live Out Care</p></li>
+            <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Elderly Attention</p></li>
+            <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">Caring Aide and Companionship</p></li>
+            <li><i class="fa-li fas fa-hands-helping"></i><p class="services__point">General Care and Assistance such as help with personal needs, light and general house keeping</p></li>
+          </ul>
+      </div>  
+        
       <img class="services__img" src="img/birthday_cropped.jpeg" alt="old lady having a birthday party">
+      
     </div>
 
     <div class="testimonials">
       <h4 class="heading testimonials__heading">Testimonials</h4>
-      <div class="testimonial">
-        <i class="fas fa-quote-right fa-2x testimonial__icon"></i>
-        <p class="paragraph testimonial__paragraph">We never wanted to send my mother to a nursing home. Looking for a good alternative as well as affordable option wasn't easy in present day America. A friend recommended caring hearts to us and i can confidently say the services provided are good value for money.</p>
-        <h5 class="testimonial__author">Koby Barnes</h5>
+      <div class="testimonial__container">
+          <div class="testimonial">
+              <i class="fas fa-quote-right fa-2x testimonial__icon"></i>
+              <p class="paragraph testimonial__paragraph">We never wanted to send my mother to a nursing home. Looking for a good alternative as well as affordable option wasn't easy in present day America. A friend recommended caring hearts to us and i can confidently say the services provided are good value for money.</p>
+              <h5 class="testimonial__author">Koby Barnes</h5>
+            </div>
+      
+            <div class="testimonial">
+              <i class="fas fa-quote-right fa-2x testimonial__icon"></i>
+              <p class="paragraph testimonial__paragraph">Caregivers are a real charm, extremely patient and very professional. I will recommend them any day.</p>
+              <h5 class="testimonial__author">Amy</h5>
+            </div>
       </div>
-
-      <div class="testimonial">
-        <i class="fas fa-quote-right fa-2x testimonial__icon"></i>
-        <p class="paragraph testimonial__paragraph">Caregivers are a real charm, extremely patient and very professional. I will recommend them any day.</p>
-        <h5 class="testimonial__author">Amy</h5>
-      </div>
-
     </div>
 
     <div class="forms">
       <h4 class="heading form__heading">Let’s get to know each other</h4>
       <div class="form-card">
         <h5 class="form-card__heading">Let us show you how much we care</h5>
-          <form action="https://formspree.io/dropyourspoon@gmail.com" method="POST">
+          <form action="https://formspree.io/cderanamie@yahoo.com" method="POST">
 
             <div class="form-field">
               <label for="form-name">Name</label>
@@ -137,7 +175,7 @@
               <label for="form-msg">Short message (300 chars)</label>
               <textarea id="form-msg" cols="0" rows="5" type="text" name="Short message" maxlength="300" placeholder="Type a short message here..."></textarea>
             </div>
-            
+            <p>Please make sure you complete reCaptcha after you submit the form</p>
             <input type="submit" value="Apply for Care">
           </form>        
       </div>
