@@ -1,4 +1,4 @@
-<html lang="en">
+  <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -10,43 +10,33 @@
   <title>Caring Hearts Helping Hands</title>
 </head>
 <body>
-
+    
   <div class="wrapper">
-
+      
     <div class="header">
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu__links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+            <div class="mobile-menu__info">
+              <p class="mobile-menu__phone"><span class="white">Call Us Today:</span>  774 208 3238</p>
+              <p class="mobile-menu__email"><span class="white">Email:</span>  cderanamie@yahoo.com</p>
+              <span class="locationFinder locationFinder__mobile" onclick="window.open('https://goo.gl/maps/MNtqoSHBhGauaHWn8')">
+                <p class="locationFinder__text">Location Finder</p>
+                <i class="fas fa-map-marker-alt location__icon"></i>
+              </span>
+            </div>
+             
+          </div>
+
       <img class="logo" id="home" src="img/CHWHH logo_cropped.png" alt="caring hearts helping hands logo">
-      <!-- <span onclick="toggleMenu()" id="hamburgerIcon"class="hamburger-icon">
-        <i class="fas fa-bars fa-2x"></i>
-      </span> -->
       <div class="hamburger-icon" id="hamburgerIcon" onclick="toggleMenu()">
         <div class="hamburger-icon__middle"></div>
       </div>
-      <!-- <div onclick="toggleMenu()" id="hamburgerIcon" class="hamburger-icon">
-          <div class="hamburger-icon__top" style="
-        position: absolute;
-        top: 4;
-        left: 0;
-        width: 28px;
-        height: 3px;
-        background: #9C27B0;
-      "></div> 
-          <div class="hamburger-icon__middle" style="
-        position: absolute;
-        top: 12;
-        left: 0;
-        width: 28px;
-        height: 3px;
-        background: #9C27B0;
-      "></div> 
-          <div class="hamburger-icon__bottom" style="
-        position: absolute;
-        bottom: 5;
-        left: 0;
-        width: 28px;
-        height: 3px;
-        background: #9C27B0;
-      "></div>
-      </div> -->
+
+      
 
       <div class="company__info">
         <div class="company__info__inner">
@@ -78,16 +68,6 @@
         </div>
       </div>
 
-      <!-- <img class="hero__image" src="img/old_lady_cropped.jpg" alt="old lady"> -->
-      <!-- <img srcset="img/lady_320.jpeg 320w,
-                   img/lady_420.jpeg 420w,
-                   img/lady_520.jpeg 520w,
-                   img/lady_610.jpeg 610w"
-           sizes="(max-width: 430px) 326px
-                  (max-width: 520px) 420px
-                  (max-width: 610px) 520px
-                  610px"
-           src="img/lady_610.jpeg" alt="old lady"> -->
       <img	srcset="img/lady_320.jpeg 320w,
                     img/lady_610.jpeg 610w,
                     img/old_lady_cropped.jpg 810w"
