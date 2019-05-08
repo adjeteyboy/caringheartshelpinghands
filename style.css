@@ -558,9 +558,9 @@ a {
   background: -o-linear-gradient(left, #ad5389, #3c1053);
   background: linear-gradient(to right, #ad5389, #3c1053);
   position: fixed;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
 }
 .mobile-menu--isActive {
   -webkit-transform: translateX(0);
