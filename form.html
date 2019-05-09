@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Application Form</title>
+</head>
+
+<body>
+  <img class="logo" id="home" src="img/CHWHH logo_cropped.png" alt="caring hearts helping hands logo">
+  <div class="back-button">Back to Homepage</div>
+
+  <form action="https://formspree.io/emmanuelasirifi1993@yahoo.com" method="POST">
+    <h1>Personal Information</h1>
+
+    <div class="apply-field">
+      <label for="form-name">Name</label>
+      <input id="form-name" type="text" name="Name" placeholder="John Smith" required required minlength="3" maxlength="150">
+    </div>
+
+    <div class="apply-field">
+      <p>Select your desired position</p>
+      <div>
+        <input type="radio" name="Position desired" id="home-care" value="Home care" checked>
+        <label for="home-care">Home Care</label>
+      </div>
+      <div>
+        <input type="radio" name="Position desired" id="cna" value="CNA">
+        <label for="cna">CNA</label>
+      </div>
+    </div>
+
+    <div class="apply-field">
+      <label for="form-lastName">Last Name</label>
+      <input id="form-lastName" type="text" name="Last Name" required minlength="3" maxlength="50">
+    </div>
+
+    <div class="apply-field">
+      <label for="form-middleName">Middle Name</label>
+      <input id="form-middleName" type="text" name="Middle Name" required minlength="3" maxlength="50">
+    </div>
+
+    <div class="apply-field">
+      <label for="form-firstName">First Name</label>
+      <input id="form-firstName" type="text" name="First Name" required minlength="3" maxlength="50">
+    </div>  
+    
+    <div class="apply-field">
+      
+    </div>
+  </form>
+</body>
+</html>

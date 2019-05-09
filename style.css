@@ -598,6 +598,10 @@ a {
           justify-content: space-between;
 }
 
+.mobile-menu__links li:first-child {
+  color: #000011;
+}
+
 .mobile-menu__links li {
   list-style: none;
   color: #fff;
