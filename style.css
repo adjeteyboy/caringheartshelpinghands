@@ -355,7 +355,6 @@ template {
   background: rgb(99,89,224);
 background: linear-gradient(90deg, rgba(99,89,224,1) 19%, rgba(217,175,183,1) 100%);
 }
-
 .info {
   text-align: center;
   position: absolute;
@@ -363,26 +362,21 @@ background: linear-gradient(90deg, rgba(99,89,224,1) 19%, rgba(217,175,183,1) 10
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-
 h2, h4 {
   color: #f6f6f6;
   font-family: 'Roboto', sans-serif;
 }
-
 h4 {
   font-size: 15px
 }
-
 #day__digit,#minute__digit,#hour__digit, #second__digit {
   color: #f6f6f6;
   font-family: 'Roboto', sans-serif;
   font-size: 30px
 }
-
 .day, .hour, .minute, .second {
   padding-right: 10px;
 }
-
 div.time {
   border: 1px solid coral;
   padding: 20px 30px;
@@ -392,7 +386,6 @@ div.time {
 -moz-box-shadow: 10px 10px 76px -16px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 76px -16px rgba(0,0,0,0.75);
 }
-
 div.time > * {
   display: inline-block
     
@@ -548,7 +541,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
+  position: fixed;
   width: 320px;
   height: 100vh;
   top: 0;
@@ -580,7 +573,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
+  /* position: absolute; */
   top: 60px;
   margin: 0;
   padding-left: 60px;
@@ -1174,4 +1167,3 @@ input[type="submit"] {
   text-shadow: 1px 1px 1px #000;
   color: #fff;
 }
-
