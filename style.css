@@ -578,7 +578,7 @@ a {
   margin: 0;
   padding-left: 60px;
   font-size: 1.3em;
-  height: 100px;
+  height: 120px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -723,13 +723,15 @@ nav>ul>li {
   float: left;
   color: #6C6C6C;
   margin-right: 1.2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  transition: all .2s linear;
 }
 
-/* nav>ul>li:last-child {
-  margin-right: 0;
-} */
+nav>ul>li:hover {
+  color: #9C27B0;
+  transform: scale(1.1)
+}
 
 .locationFinder__text {
   display: inline;
@@ -1137,6 +1139,7 @@ nav>ul>li {
 }
 
 .form-field label {
+  margin-bottom: 8px;
   font-size: 1.125rem;
   color: #9C27B0;
   letter-spacing: inherit;
@@ -1148,10 +1151,14 @@ label {
 
 input, textarea {
   background-color: rgba(156,39,176,.2);
-  border-radius: 2px;
+  border-radius: 4px;
   border-style: none;
   padding: .5rem;
   width: 100%;
+}
+
+input {
+  padding: 12px 16px;
 }
 
 textarea {

@@ -4,51 +4,241 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+  <link rel="stylesheet" href="time-polyfill.css">
+  <script type="text/javascript" src="time-polyfill.min.js"></script>
+  <link rel="stylesheet" href="form.css">
   <title>Application Form</title>
 </head>
 
 <body>
-  <img class="logo" id="home" src="img/CHWHH logo_cropped.png" alt="caring hearts helping hands logo">
-  <div class="back-button">Back to Homepage</div>
+  <div class="main-wrapper">
 
-  <form action="https://formspree.io/emmanuelasirifi1993@yahoo.com" method="POST">
-    <h1>Personal Information</h1>
+        <nav class="nav">
+          <a href="/index.html">
+            <img class="logo" src="img/CHWHH logo_cropped.png" alt="caring hearts helping hands logo">
+          </a>
+          <a href="/index.html">
+            <div class="back-button">
+              <i fa-10x class="fas fa-arrow-left"></i>
+            </div>
+            </a>
+        </nav>
+        <!-- emmanuelasirifi1993@yahoo.com -->
+        <form action="https://formspree.io/emmanuelasirifi1993@yahoo.com" method="POST" class="center-form">
+            <h2 style="color: #515151; margin-bottom: 50px;">Apply to work with us</h2>
+            <h3>Personal Information</h3>
+        
+            <div class="apply-field">
+              <label for="form-name">Name</label>
+              <input id="form-name" type="text" name="Name"  required required minlength="3" maxlength="150">
+            </div>
+        
+            <div class="apply-field" style="margin-bottom: 18px;">
+              <p style="margin-bottom: 8px">Select your desired position</p>
+              <div class="radio-container" style="margin-bottom: 8px">
+                <label for="home-care">Home Care</label>
+                <input type="radio" name="Position desired" id="home-care" value="Home care" checked>
+              </div>
+              <div class="radio-container">
+                <label for="cna">CNA</label>
+                <input type="radio" name="Position desired" id="cna" value="CNA">
+              </div>
+            </div>
+        
+            <div class="apply-field">
+              <label for="form-lastName">Last Name</label>
+              <input id="form-lastName" type="text" name="Last Name" required minlength="3" maxlength="50">
+            </div>
+        
+            <div class="apply-field">
+              <label for="form-middleName">Middle Name</label>
+              <input id="form-middleName" type="text" name="Middle Name" minlength="3" maxlength="50">
+            </div>
+        
+            <div class="apply-field">
+              <label for="form-firstName">First Name</label>
+              <input id="form-firstName" type="text" name="First Name" required minlength="3" maxlength="50">
+            </div>  
+            
+            <div class="apply-field">
+              <label for="form-streetAddress">Street Address</label>
+              <input type="text" name="Street Address" id="form-streetAddress" maxlength="100" required>  
+            </div>
+        
+            <div class="apply-field">
+              <label for="form-homePhone">Home Phone</label>
+              <input type="tel" name="Home Phone" id="form-homePhone" maxlength="10">
+            </div>
+        
+            <div class="apply-field">
+              <label for="Cellphone">Cell Phone Number</label>
+              <input type="tel" name="Cellphone" id="Cellphone" required maxlength="10">
+            </div>
+        
+            <div class="apply-field">
+              <label for="form-city">City</label>
+              <input type="text" name="City" id="form-city" required maxlength="50">
+            </div>
+        
+            <div class="apply-field">
+              <label for="form-state">State</label>
+              <input type="text" name="State" id="form-state" required  maxlength="50">
+            </div>
+        
+            <div class="apply-field" style="margin-bottom: 68px">
+              <label for="form-zip">Zip</label>
+              <input id="form-zip" name="Zip" type="text" required pattern="[0-9]*" title="Please make sure you entered a valid zip code">
+            </div>
+            
+        
+            <h3>Schedule/ Availability</h3>
+            <div class="apply-field">
+              <p style="margin: 0">Select your desired contract</p>
+              <div class="radio-container" style="margin-bottom: 8px">
+                <label for="form-fullTime">Full-time</label>
+                <input type="radio" name="Contract Type" id="form-fullTime" value="Full-time" checked>
+              </div>
+              <div class="radio-container">
+                <label for="form-partTime">Part-time</label>
+                <input type="radio" name="Contract Type" id="form-partTime" value="Part-time">
+              </div>
+            </div>
+        
+            <h3>Below is a daily availability schedule, write your earliest start time and closing time you can work:</h3>
+            <div class="apply-field">
+              <label for="avail-monday">Monday</label>
+              <input type="time" name="Monday" id="avail-monday"> to <input type="time" name="Monday" id="avail-monday">
+            </div>
+        
+            <div class="apply-field">
+              <label for="avail-tuesday">Tuesday</label>
+              <input type="time" name="Tuesday" id="avail-tuesday"> to <input type="time" name="Tuesday" id="avail-tuesday">
+            </div>
+        
+            <div class="apply-field">
+              <label for="avail-wednesday">Wednesday</label>
+              <input type="time" name="Wednesday" id="avail-wednesday"> to <input type="time" name="Wednesday" id="avail-wednesday">
+            </div>
+        
+            <div class="apply-field">
+              <label for="avail-thurday">Thursday</label>
+              <input type="time" name="Thursday" id="avail-thursday"> to <input type="time" name="Thursday" id="avail-thurday">
+            </div>
+        
+            <div class="apply-field">
+              <label for="avail-friday">Friday</label>
+              <input type="time" name="Friday" id="avail-friday"> to <input type="time" name="Friday" id="avail-friday">
+            </div>
+        
+            <div class="apply-field">
+              <label for="avail-maxHours">Total max hours available to work weekly: </label>
+              <input type="number" name="Total max hours" id="avail-maxHours" required minlength="1" maxlength="24">
+            </div>
+        
+            <div class="apply-field" style="margin-bottom: 68px">
+              <label for="avail-minHours">Total min hours available to work weekly: </label>
+              <input type="number" name="Total min hours" id="avail-minHours" required>
+            </div>
+            
+            
+            <h3>Legal Information</h3>
+            <div class="apply-field">
+              <p>Are you legally allowed to work in the USA?</p>
+              <div class="radio-container" style="margin-bottom: 8px">
+                <label for="legal-yes">Yes</label>
+                <input type="radio" name="Legally allowed to work in the USA?" id="legal-yes" value="Yes" checked>
+              </div>
+              <div class="radio-container" style="margin-bottom: 18px;">
+                <label for="legal-no">No</label>
+                <input type="radio" name="Legally allowed to work in the USA?" id="legal-no" value="No">
+              </div>
+            </div>
+        
+            <div class="apply-field">
+              <label for="legal-ssn">Social Security</label>
+              <input type="text" name="Social Security" id="legal-ssn" pattern="\d{3}-?\d{2}-?\d{4}" title="valid ssn number format is ###-##-####">
+            </div>
+        
+            <div class="apply-field">
+              <label for="legal-dl">Driver's License</label>
+              <input type="text" name="Driver's License" id="legal-dl" minlength="3" maxlength="20">
+            </div>    
+        
+            <div class="apply-field" style="margin-bottom: 68px">
+              <p style="margin-bottom: 8px">Have you ever been convicted of a crime?</p>
+              <div class="radio-container" style="margin-bottom: 8px">
+                <label for="legal-convict-No">No</label>
+                <input type="radio" name="Have you ever been convicted of a crime?" onchange="displayQuestion('No')" value="No" id="legal-convict-No" checked>
+              </div>
+              <div class="radio-container" style="margin-bottom: 8px">
+                <label for="legal-convict-Yes">Yes</label>
+                <input type="radio" name="Have you ever been convicted of a crime?" onchange="displayQuestion('Yes')" id="legal-convict-Yes" value="Yes">
+              </div>
+              <div id="convictReason">
+                <label for="legal-convictReason">If yes, please specify below</label>
+                <textarea id="legal-convictReason" cols="0" rows="5" type="text" name="Reason for being convicted" maxlength="200" ></textarea>
+              </div>
+            </div>
+            
+        
+            <h3>Educational Background</h3>
+            <div class="apply-field" id="education" style="margin-bottom: 74px">
+              <div class="school-1">
+                  <div>
+                    <label for="edu-SchType">Type of school</label>
+                    <select name="Type of school" id="edu-SchType">
+                      <option value="High School">High School</option>
+                      <option value="College">College</option>
+                      <option value="Other Education or special training">Other Education or special training</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="edu-name">Name of Institution</label>
+                    <input type="text" name="Name of Institution" maxlength="100" id="edu-name">
+                  </div>
+                  <div>
+                    <label for="edu-location">Location</label>
+                    <input type="text" name="Institution's Location" maxlength="100" id="edu-location">
+                  </div>
+                  <div>
+                    <label for="edu-major">Major</label>
+                    <input type="text" name="Major" maxlength="100" id="edu-major">
+                  </div>
+                  <div style="margin-bottom: 8px">
+                    <label for="edu-degree">Degree obtained</label>
+                    <input type="text" name="Degree obtained" maxlength="100" id="edu-degree">
+                  </div>
+              </div>
+        
+              <button onclick="addInstitution(); this.onclick=null" type="button" class="institutionBtn">Add another Institution</button>
+            </div>
+        
+            
+        
+            <div class="terms">
+              <h3>CARING HEART WITH HELPING HAND, INC</h3>
+              <p>I certify that the information on this application is correct and I understand that any misrepresentation or omission of any information will result in my disqualification from consideration. I understand that this is not a contract, offer, or promise of employment and that if hired, I can be terminated at will, with or without cause, with or without notice, at any time and for any reason.</p>
+              <p>CARING HEART WITH HELPING HAND, INC, in considering my application for employment may verify the information, set forth on this application related papers or oral interviews and obtain additional background information. A photographic copy of this authorization shall be as valid as the original. If any given information is found to be false or misleading, I understand that I will be subject to dismissal at any time during the period of employment without liability for wages or salary except such as may have earned at a date of such termination, and I agree to hold CARING HEART WITH HELPING HAND, INC, blameless in that event.</p>
+              <p>CARING HEART WITH HELPING HAND, INC, is an equal opportunity employer and does not discriminate in its recruiting, selecting and hiring procedures based on race, color, gender, religion, national origin, age sexual orientation or disability status nor does it discriminate with regard to Veteran status.</p>
+            </div>
+        
+            <div class="terms-acceptance">
+              <p>These Terms and Conditions represent the whole agreement and understanding between CARING HEART WITH HELPING HAND, INC and the individual or entity who applies to work with us </p>
+              <p>PLEASE READ THIS AGREEMENT CAREFULLY. By submitting your application, you agree to comply with all of the terms and conditions set out in this Agreement.</p>
+            </div>
+        
+            <input type="submit" value="submit">
+          
+        </form>
 
-    <div class="apply-field">
-      <label for="form-name">Name</label>
-      <input id="form-name" type="text" name="Name" placeholder="John Smith" required required minlength="3" maxlength="150">
-    </div>
-
-    <div class="apply-field">
-      <p>Select your desired position</p>
-      <div>
-        <input type="radio" name="Position desired" id="home-care" value="Home care" checked>
-        <label for="home-care">Home Care</label>
-      </div>
-      <div>
-        <input type="radio" name="Position desired" id="cna" value="CNA">
-        <label for="cna">CNA</label>
-      </div>
-    </div>
-
-    <div class="apply-field">
-      <label for="form-lastName">Last Name</label>
-      <input id="form-lastName" type="text" name="Last Name" required minlength="3" maxlength="50">
-    </div>
-
-    <div class="apply-field">
-      <label for="form-middleName">Middle Name</label>
-      <input id="form-middleName" type="text" name="Middle Name" required minlength="3" maxlength="50">
-    </div>
-
-    <div class="apply-field">
-      <label for="form-firstName">First Name</label>
-      <input id="form-firstName" type="text" name="First Name" required minlength="3" maxlength="50">
-    </div>  
-    
-    <div class="apply-field">
-      
-    </div>
-  </form>
+  </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
